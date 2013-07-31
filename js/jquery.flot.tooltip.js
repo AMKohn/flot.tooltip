@@ -78,13 +78,13 @@
     };
 
     FlotTooltip.prototype.updateTooltipPosition = function(pos, elm) {
-        var tipWidth = $("#flotTip").outerWidth() / 2,
-            tipHeight = $("#flotTip").outerHeight(),
-        	elmWidth = elm.outerWidth(),
-        	elmHeight = elm.outerHeight();
+        var tipWidth = this.getDomElement(elm).outerWidth() / 2,
+            tipHeight = this.getDomElement(elm).outerHeight(),
+            elmWidth = elm.outerWidth(),
+            elmHeight = elm.outerHeight();
 
-	    this.tipPosition.x = pos.x - tipWidth + this.tooltipOptions.shifts.x;
-	    this.tipPosition.y = pos.y - tipHeight - 15 + this.tooltipOptions.shifts.y;
+        this.tipPosition.x = pos.x - tipWidth + this.tooltipOptions.shifts.x;
+        this.tipPosition.y = pos.y - tipHeight - 15 + this.tooltipOptions.shifts.y;
 
         while (this.tipPosition.x + tipWidth * 2 > elm.outerWidth()) this.tipPosition.x--;
         while (this.tipPosition.y + tipHeight > elm.outerHeight()) this.tipPosition.y--;
