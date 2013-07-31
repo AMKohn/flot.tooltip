@@ -67,7 +67,7 @@
         var $tip;
 
         if( $('#flotTip').length > 0 ){
-            $tip = $('#flotTip');
+            $tip = elm.next('#flotTip');
         }
         else {
             $tip = $('<div />').attr('id', 'flotTip');
