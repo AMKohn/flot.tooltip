@@ -66,8 +66,8 @@
     FlotTooltip.prototype.getDomElement = function(elm) {
         var $tip;
 
-        if (elm.siblings('#flotTip').length > 0) {
-            $tip = elm.siblings('#flotTip');
+        if (elm.children('#flotTip').length > 0) {
+            $tip = elm.children('#flotTip');
         }
         else {
             $tip = $('<div />').attr('id', 'flotTip');
