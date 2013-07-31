@@ -66,7 +66,7 @@
     FlotTooltip.prototype.getDomElement = function(elm) {
         var $tip;
 
-        if( $('#flotTip').length > 0 ){
+        if (elm.next('#flotTip') > 0) {
             $tip = elm.next('#flotTip');
         }
         else {
